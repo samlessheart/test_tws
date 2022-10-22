@@ -5,21 +5,28 @@ this project only consists of Rest Framework
 Following API Endpoints are available 
 
 1. List of Users (GET, POST)
+
 http://127.0.0.1:8000/api/users/
 
 2. detail view of a user (GET, PUT, DELETE) (Authentication required for PUT, DELETE)
+
 http://127.0.0.1:8000/api/users/1/
 
 3. Create a Game Board (GET)(Authentication required)
+
+
 http://127.0.0.1:8000/api/createboard/
 
 4. List of all GameBoard Created (GET)(Authentication required)
+
 http://127.0.0.1:8000/api/gamelist/
 
 5. a Detail of a Game Board (GET)(Authentication required)
+
 http://127.0.0.1:8000/api/getBoard/1/
 
 6. to update a Game String (PUT)(Authentication required)
+
 http://127.0.0.1:8000/api/updateBoard/1/
 
 ---------------------------------------------------------------------------------------------
