@@ -19,6 +19,8 @@ class Gamelist(generics.ListAPIView):
     """
     API endpoint that allows users to list all the GameBoard .
     """
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
     queryset = Board.objects.all()
     serializer_class = BoardSerializer
 
@@ -44,7 +46,7 @@ class getBoard(APIView):
     """
     authentication_classes = [SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAuthenticated]
-    def get(self, pk):
+    def get(self, request, pk):
         game = Board.objects.get(id = pk)
         game  = BoardSerializer(game)
         return Response(game.data, status = status.HTTP_200_OK)
